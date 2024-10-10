@@ -1,0 +1,52 @@
+.App{
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+.car-card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.car-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.car-info {
+  margin-top: 15px;
+}
+
+.car-name {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.car-price,
+.car-cc,
+.car-mileage {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.add-to-cart-btn {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0056b3;
+}

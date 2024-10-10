@@ -1,0 +1,77 @@
+/* CarCart.css */
+
+.car-cart-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .car-cart-item {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 90%;
+    max-width: 700px;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .car-cart-item:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .car-cart-item img {
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .car-cart-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .car-cart-item p {
+    font-size: 1rem;
+    margin: 3px 0;
+    color: #555;
+  }
+  
+  .car-cart-item p strong {
+    color: #222;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-top: 20px;
+  }
+  
+  .car-cart-list p {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  /* Add a nice empty cart message */
+  .car-cart-list p:before {
+    content: '🛒';
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* General utility classes */
+  .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
