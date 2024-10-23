@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+:root{
+  --fontSize: 30px;
+  --headTitle: 45px;
+}
+
+h1,h3, span{
+  font-size: var(--headTitle);
+}
+
+.box{
+  font-size: 30px;
+}
+
+
+.ul .li a{
+  font-size: 30px;
+}
