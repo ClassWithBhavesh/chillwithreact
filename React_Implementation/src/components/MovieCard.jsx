@@ -9,14 +9,9 @@ const MovieCard = () => (
       <p className="card-body">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, culpa.
       </p>
-      <div className="btn_box">
-        <a href="#" className="button">
-          Learn More
-        </a>
-        <a href="#" className="button watchlist_btn">
-          +
-        </a>
-      </div>
+      <a href="#" className="button">
+        Learn More
+      </a>
     </div>
   </div>
 );
