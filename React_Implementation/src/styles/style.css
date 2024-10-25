@@ -10,16 +10,6 @@
     box-sizing: border-box;
   }
   
-  /* body {
-    display: grid;
-    min-height: 100vh;
-    place-items: center;
-    line-height: 1.6;
-    background: var(--clr-neutral-900);
-    font-family: sans-serif;
-    padding-right: 15em;
-  } */
-  
   .card {
     color: var(--clr-neutral-100);
     background-image: url(https://media.contentapi.ea.com/content/dam/eacom/images/2020/09/ea-featured-image-ea-desktop-beta.jpg.adapt.crop191x100.1200w.jpg);
@@ -51,6 +41,7 @@
   
   .card-title {
     position: relative;
+    left: -10%;
     width: max-content;
   }
   
@@ -73,7 +64,7 @@
   
   @media (hover) {
     .card-content {
-      transform: translateY(65%);
+      transform: translateY(35%);
       transition: transform 500ms ease;
     }
   
@@ -90,7 +81,7 @@
   
     .card:hover .card-content,
     .card:focus-within .card-content {
-      transform: translateY(0);
+      transform: translateY(-30%);
       transition-delay: 500ms;
     }
   
@@ -102,6 +93,16 @@
       transform: scaleX(0);
     }
   }
+
+  .btn_box{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 7%;
+  }
   
   .button {
     cursor: pointer;
@@ -109,15 +110,27 @@
     text-decoration: none;
     color: var(--clr-neutral-900);
     background-color: var(--clr-accent-400);
-    padding: 0.5em 1.25em;
+    padding: 0.7em 1.25em;
     border-radius: 0.25rem;
     position: relative;
     top: 20%;
+    width: 65%;
+    height: 80%;
+    align-content: center;
+    transition: all 0.4s;
+  }
+  
+  .watchlist_btn{
+    width: 25%;
+    height: 80%;
+    padding: 0.5em 1.25em;
   }
   
   .button:hover,
   .button:focus {
-    background-color: var(--clr-neutral-100);
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
   }
   
   .card-body {
@@ -136,9 +149,6 @@
     width: calc(100vw - 117.33px);
     height: 100%;
     padding: 30px;
-    /* display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto; */
   }
 
   .movie-sec ul {
@@ -168,4 +178,123 @@
       transition-delay: 0ms !important;
     }
   }
+
+  :root {
+    --clr-neutral-900: hsl(207, 19%, 9%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-accent-400: hsl(142, 90%, 61%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.card {
+    color: var(--clr-neutral-100);
+    background-image: url(https://media.contentapi.ea.com/content/dam/eacom/images/2020/09/ea-featured-image-ea-desktop-beta.jpg.adapt.crop191x100.1200w.jpg);
+    background-size: cover;
+    padding: 10rem 0 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+    height: 300px;
+    width: 250px;
+}
+
+.card:hover,
+.card:focus-within {
+    transform: scale(1.05);
+}
+
+.card-content {
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% / 0.3) 20%,
+        hsl(0 0% 0% / 1)
+    );
+    width: 100%;
+    height: 150%;
+}
+
+.card-title {
+    position: relative;
+    width: max-content;
+}
+
+.card:hover .card-title::after,
+.card:focus-within .card-title::after {
+    transform: scaleX(1);
+}
+
+.card-title::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: calc(100% + var(--padding));
+    left: calc(var(--padding) * -1);
+    bottom: -2px;
+    background: var(--clr-accent-400);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-neutral-900);
+    background-color: var(--clr-accent-400);
+    padding: 0.5em 1.25em;
+    border-radius: 0.25rem;
+    position: relative;
+    top: 20%;
+}
+
+.card-body {
+    color: rgb(255, 255, 255 / 0.85);
+    padding: 10px 0;
+}
+
+.ott-sec {
+    display: flex;
+    width: 100vw;
+    height: calc(100vh - 81.98px);
+}
+
+.movie-sec {
+    width: calc(100vw - 117.33px);
+    height: 100%;
+    padding: 30px;
+}
+
+/* Movie Grid Styling */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 1200px) {
+    .movie-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .movie-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
   
